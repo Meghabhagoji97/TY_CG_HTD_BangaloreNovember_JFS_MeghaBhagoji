@@ -1,0 +1,52 @@
+PROJECTION:-
+
+SELECT */[DISTINCT] COLUMN_NAME/ EXPRESSION[ALIAS]
+FROM TABLE_NAME
+.....................................................................
+
+SELECTION:-							ORDER OF EXECUTION	
+								   i) FROM
+SELECT */[DISTINCT] COLUMN_NAME/ EXPRESSION[ALIAS]		   ii)WHERE
+FROM TABLE_NAME							   iii)SELECT
+WHERE <FILTER CONDITION>
+
+......................................................................
+
+GROUP BY:-							
+								ORDER OF EXECUTION	
+								   i) FROM
+								   ii)WHERE {IF ANY} =>ROW BY ROW
+								   iii) GROUP BY => ROW BY ROW
+								   iv)SELECT =>GROUP BY GROUP
+
+SELECT */[DISTINCT] COLUMN_NAME/ EXPRESSION[ALIAS]
+FROM TABLE_NAME
+[WHERE <FILTER CONDTITON>]
+GROUP BY COLUMN_NAME
+
+............................................................
+HAVING CLAUSE:
+								ORDER OF EXECUTION	
+								   i) FROM
+SELECT */[DISTINCT] COLUMN_NAME/ EXPRESSION[ALIAS]		   ii)WHERE  {IF ANY} =>ROW BY ROW
+FROM TABLE_NAME							   iii)GROUP BY =>GROUP BY GROUP
+WHERE <FILTER CONDITION>					   iv)HAVING =>GROUP BY GROUP
+GROUP BY COLUMN_NAME						   v)SELECT =>GROUP BY GROUP
+HAVINH <GROUP FILTER CONDITION>
+
+...........................................................................................................................................
+ORDER BY:-
+								ORDER OF EXECUTION	
+								   i) FROM
+SELECT */[DISTINCT] COLUMN_NAME/ EXPRESSION[ALIAS]		   ii)WHERE  {IF ANY} =>ROW BY ROW
+FROM TABLE_NAME							   iii)GROUP BY =>GROUP BY GROUP
+[WHERE <FILTER CONDITION>]					   iv)HAVING =>GROUP BY GROUP
+[GROUP BY COLUMN_NAME]					           v)SELECT =>GROUP BY GROUP
+[ HAVING <GROUP FILTER CONDITION>]				   vi)ORDER BY =>ROW BY ROW
+ORDER BY COLUMN_NAME
+
+
+
+
+
+
