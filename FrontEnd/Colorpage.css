@@ -1,0 +1,18 @@
+ul li
+{
+    list-style: none;
+    display: inline;
+    
+}
+
+
+
+.one , .two
+{
+    float: right;
+}
+
+a{
+    padding: 20px;
+    
+}

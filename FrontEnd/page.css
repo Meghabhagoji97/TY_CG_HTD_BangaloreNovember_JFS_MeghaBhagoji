@@ -1,0 +1,31 @@
+
+ul li
+{
+    list-style: none;
+    display: inline;
+}
+
+
+
+.one , .two
+{
+    float: right;
+}
+
+a{
+    padding: 20px;
+    text-decoration: none;
+}
+
+img{
+    padding: 2%;
+    
+    border-radius: 50%;
+    
+}
+div{
+    border:1px  solid;
+    width:30%;
+    height: 300;
+    
+}
